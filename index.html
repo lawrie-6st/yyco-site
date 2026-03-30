@@ -76,6 +76,7 @@
       font-style: italic;
       color: #000;
       line-height: 1.6;
+      text-align: left;
     }
 
     .hero h1 .subtitle {
@@ -136,6 +137,49 @@
       transform: translateY(-50%);
       font-size: 18px;
       color: #b8977e;
+    }
+
+    /* Balloon / speech-bubble heading */
+    .heading-balloon {
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    .heading-balloon h2 {
+      display: inline-block;
+      position: relative;
+      font-size: 22px;
+      font-weight: 700;
+      padding: 12px 30px;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .heading-balloon h2::before {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 11px solid transparent;
+      border-right: 11px solid transparent;
+      border-top: 11px solid #ccc;
+    }
+
+    .heading-balloon h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #fff;
     }
 
     /* Left-aligned heading with accent line */
@@ -383,8 +427,8 @@
     }
 
     .profile-img {
-      width: 350px;
-      height: 350px;
+      width: 420px;
+      height: 420px;
       border-radius: 50%;
       object-fit: cover;
       margin: 0 auto 25px;
@@ -651,7 +695,7 @@
   </section>
 
   <!-- 活動内容 -->
-  <div class="heading-speech">
+  <div class="heading-balloon">
     <h2>活動内容</h2>
   </div>
 
@@ -681,7 +725,7 @@
   </section>
 
   <!-- メンバー募集中！ -->
-  <div class="heading-speech">
+  <div class="heading-balloon">
     <h2>メンバー募集中！</h2>
   </div>
 
