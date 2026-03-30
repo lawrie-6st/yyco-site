@@ -41,7 +41,7 @@
     }
 
     .wrapper {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
     }
 
@@ -107,7 +107,7 @@
     /* ===== HEADING STYLES ===== */
     .heading-speech {
       text-align: center;
-      padding: 30px 20px;
+      padding: 40px 20px;
     }
 
     .heading-speech h2 {
@@ -115,36 +115,42 @@
       position: relative;
       font-size: 22px;
       font-weight: 700;
-      padding: 12px 30px;
-      background: #fff;
-      border: 1px solid #ccc;
-      border-radius: 8px;
-    }
-
-    .heading-speech h2::after {
-      content: '';
-      position: absolute;
-      bottom: -10px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-top: 10px solid #fff;
+      padding: 0 40px;
     }
 
     .heading-speech h2::before {
-      content: '';
+      content: '＼';
       position: absolute;
-      bottom: -12px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 0;
-      height: 0;
-      border-left: 11px solid transparent;
-      border-right: 11px solid transparent;
-      border-top: 11px solid #ccc;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      color: #b8977e;
+    }
+
+    .heading-speech h2::after {
+      content: '／';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 18px;
+      color: #b8977e;
+    }
+
+    /* Left-aligned heading with accent line */
+    .heading-accent {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px 10px;
+    }
+
+    .heading-accent h2 {
+      font-size: 22px;
+      font-weight: 700;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #b8977e;
+      display: inline-block;
     }
 
     .heading-colored {
@@ -156,24 +162,24 @@
       display: inline-block;
       font-size: 22px;
       font-weight: 700;
-      padding: 12px 30px;
+      padding: 14px 60px;
       background: #b8977e;
       color: #fff;
-      border-radius: 8px;
+      border-radius: 0;
       position: relative;
     }
 
     .heading-colored h2::after {
       content: '';
       position: absolute;
-      bottom: -10px;
+      bottom: -12px;
       left: 50%;
       transform: translateX(-50%);
       width: 0;
       height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-top: 10px solid #b8977e;
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-top: 12px solid #b8977e;
     }
 
     /* ===== CHECKLIST ===== */
@@ -183,7 +189,7 @@
 
     .checklist ul {
       list-style: none;
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -217,7 +223,7 @@
     }
 
     .article-text p {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
       font-size: 15px;
       line-height: 1.9;
@@ -229,15 +235,11 @@
     }
 
     .list-with-image .grid {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
       display: flex;
       gap: 30px;
       align-items: flex-start;
-    }
-
-    .list-with-image .grid--reverse {
-      flex-direction: row-reverse;
     }
 
     .list-with-image .image-col {
@@ -323,9 +325,10 @@
     }
 
     .feature-item {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto 40px;
       display: flex;
+      flex-direction: row-reverse;
       gap: 25px;
       align-items: flex-start;
     }
@@ -380,12 +383,13 @@
     }
 
     .profile-img {
-      width: 200px;
-      height: 200px;
+      width: 350px;
+      height: 350px;
       border-radius: 50%;
       object-fit: cover;
-      margin: 0 auto 20px;
+      margin: 0 auto 25px;
       display: block;
+      border: 3px solid #e8ddd4;
     }
 
     .profile-section .bio {
@@ -477,7 +481,7 @@
     }
 
     .access-grid {
-      max-width: 800px;
+      max-width: 1000px;
       margin: 0 auto;
       display: flex;
       gap: 30px;
@@ -539,8 +543,7 @@
         grid-template-columns: 1fr;
       }
 
-      .list-with-image .grid,
-      .list-with-image .grid--reverse {
+      .list-with-image .grid {
         flex-direction: column;
       }
 
@@ -557,6 +560,11 @@
         flex: none;
         width: 60%;
         margin: 0 auto;
+      }
+
+      .profile-img {
+        width: 250px;
+        height: 250px;
       }
 
       .access-grid {
@@ -649,7 +657,7 @@
 
   <!-- ACTIVITY DETAILS -->
   <section class="list-with-image">
-    <div class="grid grid--reverse">
+    <div class="grid">
       <div class="text-col">
         <ul class="dashed-list">
           <li>
@@ -684,7 +692,7 @@
 
   <!-- RECRUIT DETAILS -->
   <section class="list-with-image">
-    <div class="grid grid--reverse">
+    <div class="grid">
       <div class="text-col">
         <ul class="dashed-list">
           <li>
@@ -718,7 +726,7 @@
   </section>
 
   <!-- 私たちの特徴 -->
-  <div class="heading-speech">
+  <div class="heading-accent">
     <h2>私たちの特徴</h2>
   </div>
 
