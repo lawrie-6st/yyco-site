@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yokohama Youth Chamber Orchestra</title>
+  <meta name="description" content="横浜ユースチェンバーオーケストラ - 音楽のたのしさを分かち合う">
+  <meta property="og:title" content="Yokohama Youth Chamber Orchestra">
+  <meta property="og:description" content="横浜ユースチェンバーオーケストラ - 音楽のたのしさを分かち合う">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Shippori Mincho', 'Georgia', serif;
+      color: #333;
+      background-color: #faf8f5;
+      line-height: 1.8;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .section {
+      padding: 40px 20px;
+    }
+
+    .wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .wrapper--sm {
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .text-center {
+      text-align: center;
+    }
+
+    .text-left {
+      text-align: left;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      background-image: url('images/header-bg.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 80px 20px;
+      min-height: 400px;
+      display: flex;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: 28px;
+      font-weight: 700;
+      font-style: italic;
+      color: #000;
+      line-height: 1.6;
+    }
+
+    .hero h1 .subtitle {
+      font-size: 16px;
+      font-style: italic;
+    }
+
+    /* ===== INTRO SECTION ===== */
+    .intro {
+      background-image: url('images/main-bg.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 60px 20px;
+      min-height: 350px;
+    }
+
+    .intro-text {
+      max-width: 500px;
+      font-size: 15px;
+      line-height: 2;
+    }
+
+    .intro-text .highlight {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    /* ===== HEADING STYLES ===== */
+    .heading-speech {
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .heading-speech h2 {
+      display: inline-block;
+      position: relative;
+      font-size: 22px;
+      font-weight: 700;
+      padding: 12px 30px;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .heading-speech h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #fff;
+    }
+
+    .heading-speech h2::before {
+      content: '';
+      position: absolute;
+      bottom: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 11px solid transparent;
+      border-right: 11px solid transparent;
+      border-top: 11px solid #ccc;
+    }
+
+    .heading-colored {
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    .heading-colored h2 {
+      display: inline-block;
+      font-size: 22px;
+      font-weight: 700;
+      padding: 12px 30px;
+      background: #b8977e;
+      color: #fff;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    .heading-colored h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-top: 10px solid #b8977e;
+    }
+
+    /* ===== CHECKLIST ===== */
+    .checklist {
+      padding: 20px;
+    }
+
+    .checklist ul {
+      list-style: none;
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+
+    .checklist li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .checklist .check-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      margin-top: 3px;
+    }
+
+    .check-icon svg {
+      width: 22px;
+      height: 22px;
+      fill: #b8977e;
+    }
+
+    /* ===== ARTICLE SECTION ===== */
+    .article-text {
+      padding: 30px 20px;
+    }
+
+    .article-text p {
+      max-width: 800px;
+      margin: 0 auto;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    /* ===== LIST WITH IMAGE ===== */
+    .list-with-image {
+      padding: 30px 20px;
+    }
+
+    .list-with-image .grid {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .list-with-image .grid--reverse {
+      flex-direction: row-reverse;
+    }
+
+    .list-with-image .image-col {
+      flex: 0 0 38%;
+    }
+
+    .list-with-image .image-col img {
+      width: 100%;
+      border-radius: 4px;
+    }
+
+    .list-with-image .text-col {
+      flex: 1;
+    }
+
+    .list-with-image .dashed-list {
+      list-style: none;
+    }
+
+    .list-with-image .dashed-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px 0;
+      border-bottom: 1px dashed #ccc;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .list-with-image .dashed-list li:first-child {
+      padding-top: 0;
+    }
+
+    .list-with-image .dashed-list .small {
+      font-size: 12px;
+    }
+
+    /* ===== CTA BUTTON ===== */
+    .cta-section {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .cta-btn {
+      display: inline-block;
+      padding: 18px 50px;
+      font-size: 18px;
+      font-family: 'Shippori Mincho', serif;
+      font-weight: 600;
+      color: #fff;
+      background: #b8977e;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: opacity 0.3s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-btn:hover {
+      opacity: 0.85;
+    }
+
+    .cta-btn::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      animation: reflection 3s infinite;
+    }
+
+    @keyframes reflection {
+      0% { left: -100%; }
+      50% { left: 100%; }
+      100% { left: 100%; }
+    }
+
+    /* ===== FEATURES ===== */
+    .features {
+      padding: 30px 20px;
+    }
+
+    .feature-item {
+      max-width: 800px;
+      margin: 0 auto 40px;
+      display: flex;
+      gap: 25px;
+      align-items: flex-start;
+    }
+
+    .feature-item .feature-img {
+      flex: 0 0 25%;
+    }
+
+    .feature-item .feature-img img {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 4px;
+    }
+
+    .feature-item .feature-content {
+      flex: 1;
+    }
+
+    .feature-item .feature-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .feature-item .feature-desc {
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    /* ===== PROFILE ===== */
+    .profile-section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .profile-section h2 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 25px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .profile-section h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: #b8977e;
+      margin: 8px auto 0;
+    }
+
+    .profile-img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 20px;
+      display: block;
+    }
+
+    .profile-section .bio {
+      max-width: 500px;
+      margin: 0 auto;
+      font-size: 14px;
+      line-height: 1.9;
+      text-align: left;
+    }
+
+    .profile-section .sns-icons {
+      margin-top: 15px;
+    }
+
+    .profile-section .sns-icons img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+    }
+
+    /* ===== PHILOSOPHY ===== */
+    .philosophy {
+      background-image: url('images/philosophy-bg.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      padding: 80px 20px;
+      min-height: 500px;
+    }
+
+    .philosophy .content {
+      max-width: 500px;
+    }
+
+    .philosophy h2 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+
+    .philosophy .text {
+      font-size: 15px;
+      line-height: 2.2;
+    }
+
+    .philosophy .text strong {
+      font-weight: 700;
+    }
+
+    /* ===== DIVIDER ===== */
+    .divider {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 10px 20px;
+    }
+
+    .divider hr {
+      border: none;
+      border-top: 3px solid #ccc;
+    }
+
+    .divider-double hr {
+      border: none;
+      border-top: 3px double #ccc;
+    }
+
+    /* ===== ACCESS / MAP ===== */
+    .access-section {
+      padding: 40px 20px;
+    }
+
+    .access-section h2 {
+      font-size: 22px;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 25px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .access-section h2::after {
+      content: '';
+      display: block;
+      width: 60px;
+      height: 2px;
+      background: #b8977e;
+      margin: 8px auto 0;
+    }
+
+    .access-grid {
+      max-width: 800px;
+      margin: 0 auto;
+      display: flex;
+      gap: 30px;
+      align-items: flex-start;
+    }
+
+    .access-grid .info-col {
+      flex: 1;
+    }
+
+    .access-grid .map-col {
+      flex: 1;
+    }
+
+    .access-grid .map-col iframe {
+      width: 100%;
+      height: 250px;
+      border: 0;
+      border-radius: 4px;
+    }
+
+    /* ===== CONTACT INFO ===== */
+    .contact-info {
+      padding: 30px 20px;
+    }
+
+    .contact-info .inner {
+      max-width: 640px;
+      margin: 0 auto;
+      font-size: 15px;
+      line-height: 2;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 13px;
+      color: #888;
+      border-top: 1px solid #e5e5e5;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      .hero {
+        padding: 50px 20px;
+        min-height: 300px;
+      }
+
+      .hero h1 {
+        font-size: 22px;
+      }
+
+      .hero h1 .subtitle {
+        font-size: 14px;
+      }
+
+      .checklist ul {
+        grid-template-columns: 1fr;
+      }
+
+      .list-with-image .grid,
+      .list-with-image .grid--reverse {
+        flex-direction: column;
+      }
+
+      .list-with-image .image-col {
+        flex: none;
+        width: 100%;
+      }
+
+      .feature-item {
+        flex-direction: column;
+      }
+
+      .feature-item .feature-img {
+        flex: none;
+        width: 60%;
+        margin: 0 auto;
+      }
+
+      .access-grid {
+        flex-direction: column-reverse;
+      }
+
+      .philosophy {
+        padding: 50px 20px;
+      }
+
+      .philosophy h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrapper">
+      <h1>
+        Yokohama Youth<br>
+        Chamber Orchestra<br>
+        <span class="subtitle">-音楽のたのしさを分かち合う-</span>
+      </h1>
+    </div>
+  </section>
+
+  <!-- INTRO -->
+  <section class="intro">
+    <div class="wrapper">
+      <div class="intro-text">
+        <p>
+          こんにちは！<br>
+          横浜ユースチェンバーオーケストラです。
+        </p>
+        <br>
+        <p>
+          元気に駆け回り遊ぶ子どもたちが<br>
+          楽器を抱え気軽に<br>
+          遊びにいける場を<br>
+          目指しています。
+        </p>
+        <br>
+        <p class="highlight">
+          6歳位〜高校生のメンバーを<br>
+          募集中です！！
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- こんな楽団です -->
+  <div class="heading-speech">
+    <h2>こんな楽団です</h2>
+  </div>
+
+  <!-- CHECKLIST -->
+  <section class="checklist">
+    <ul>
+      <li>
+        <span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+        <span>弦楽合奏（バイオリン、ヴィオラ、チェロ、コントラバス）</span>
+      </li>
+      <li>
+        <span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+        <span>神奈川県横浜市の戸塚で活動しています</span>
+      </li>
+      <li>
+        <span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+        <span>合奏を通じメロディ、リズム、ハーモニーを体験します</span>
+      </li>
+      <li>
+        <span class="check-icon"><svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+        <span>初心者も一緒に楽しめるようサポートします</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- DESCRIPTION -->
+  <section class="article-text">
+    <p>こんにちは。横浜ユースチェンバー(YYCO)です。「音楽のたのしさを分かち合う」の思いをもとに、チェリスト森澤泰とヴァイオリニスト森澤麻里江が主宰。2024年秋より活動を開始します！</p>
+  </section>
+
+  <!-- 活動内容 -->
+  <div class="heading-speech">
+    <h2>活動内容</h2>
+  </div>
+
+  <!-- ACTIVITY DETAILS -->
+  <section class="list-with-image">
+    <div class="grid grid--reverse">
+      <div class="text-col">
+        <ul class="dashed-list">
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 24 24"><path fill="#b8977e" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+            <span>活動内容：土曜日(隔週)<br><span class="small">*週により日曜日・祝日に移動する可能性もあります</span></span>
+          </li>
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 24 24"><path fill="#b8977e" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+            <span>場所：戸塚幼稚園（横浜市戸塚区戸塚町3967 / JR戸塚駅徒歩8分）</span>
+          </li>
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 24 24"><path fill="#b8977e" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+            <span>費用：団費5,000円（月謝制）</span>
+          </li>
+        </ul>
+      </div>
+      <div class="image-col">
+        <img src="images/activity.jpeg" alt="活動の様子">
+      </div>
+    </div>
+  </section>
+
+  <!-- メンバー募集中！ -->
+  <div class="heading-speech">
+    <h2>メンバー募集中！</h2>
+  </div>
+
+  <!-- RECRUIT TEXT -->
+  <section class="article-text">
+    <p>こんなメンバーを募集しています♩</p>
+  </section>
+
+  <!-- RECRUIT DETAILS -->
+  <section class="list-with-image">
+    <div class="grid grid--reverse">
+      <div class="text-col">
+        <ul class="dashed-list">
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 24 24"><path fill="#b8977e" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+            <span>6歳位〜高校生</span>
+          </li>
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 24 24"><path fill="#b8977e" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+            <span>弦楽器の経験年数1年目〜<br><span class="small">（進度により、加入時期や個別レッスンを提案させていただくことがあります）</span></span>
+          </li>
+          <li>
+            <span class="check-icon"><svg viewBox="0 0 24 24"><path fill="#b8977e" d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg></span>
+            <span>合奏をみんなで楽しみたい方</span>
+          </li>
+        </ul>
+      </div>
+      <div class="image-col">
+        <img src="images/recruit.jpg" alt="募集イメージ">
+      </div>
+    </div>
+  </section>
+
+  <!-- APPLICATION INFO -->
+  <section class="article-text">
+    <p>先ずは「見学・体験」をお申し込みください♩個別にご案内いたします。その上で加入を希望してくださる際はご本人と面接<span style="font-size: 12px;">（楽器の演奏を含む）</span>を設定させていただきます。</p>
+  </section>
+
+  <!-- CTA BUTTON -->
+  <section class="cta-section">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf-Y_np3wpqbCmLYuE8AOnjPZPrTzjvodD7uQkme3cX6yRg_A/viewform" class="cta-btn">見学・体験を申込む</a>
+  </section>
+
+  <!-- 私たちの特徴 -->
+  <div class="heading-speech">
+    <h2>私たちの特徴</h2>
+  </div>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="feature-item">
+      <div class="feature-img">
+        <img src="images/feature1.jpeg" alt="音楽と遊ぶ">
+      </div>
+      <div class="feature-content">
+        <div class="feature-title">音楽と遊ぶ。</div>
+        <div class="feature-desc">
+          技術の競争ではなく、<br>
+          遊びとしての音楽を大切にします。<br>
+          クラシックというとすこし敷居が高い印象を<br>
+          持たれる場合もあるのですが、<br>
+          地元戸塚で元気に走り回っている子たちが<br>
+          気軽に来られるような場所にしたい"の<br>
+          思いではじめました。<br>
+          初心者の子も歓迎です♩
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-img">
+        <img src="images/feature2.jpg" alt="自然・歴史・アーティスト">
+      </div>
+      <div class="feature-content">
+        <div class="feature-title">自然に、歴史に、国内外一流アーティストに、触れる。</div>
+        <div class="feature-desc">
+          音楽は自然や歴史と繋がっています。<br>
+          弦楽器のボディは樹で<br>
+          弓の毛は馬のしっぽです。<br>
+          大地、植物、動物、気候に根差して<br>
+          音楽は存在しています。<br>
+          また作曲家、演奏家。<br>
+          音楽は時代と地域を巡り今があります。<br>
+          そしてYYCOでは<br>
+          国内外一流アーティストに<br>
+          触れる機会も提供します。<br>
+          楽団を通して皆で<br>
+          広く有機的につながる世界を<br>
+          共に体験していきましょう。
+        </div>
+      </div>
+    </div>
+
+    <div class="feature-item">
+      <div class="feature-img">
+        <img src="images/feature3.jpeg" alt="丁寧なサポート">
+      </div>
+      <div class="feature-content">
+        <div class="feature-title">丁寧に、サポートを。</div>
+        <div class="feature-desc">
+          初心者で弾けるメロディから本格的な合奏へ。<br>
+          楽器経験が長くなくても、<br>
+          丁寧に伴走します。<br>
+          また楽団ではみんなでの練習演奏となりますが、<br>
+          ご希望の際には個別レッスン(別途有料)での<br>
+          サポートもいたします♩
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 主宰者 -->
+  <div class="heading-colored">
+    <h2>主宰者</h2>
+  </div>
+
+  <!-- PROFILE: 森澤 泰 -->
+  <section class="profile-section">
+    <h2>森澤 泰</h2>
+    <img src="images/profile-yasushi.jpeg" alt="森澤 泰" class="profile-img">
+    <div class="bio">
+      <p>チェロ奏者、横浜市戸塚区出身、東京藝術大学音楽学部、ジュリアード音楽院音楽院大学院(Master of Music)修了。<br>
+      フレズノフィルハーモニック(副首席）を経て、1996年より新日本フィルに在籍。</p>
+    </div>
+  </section>
+
+  <!-- PROFILE: 森澤 麻里江 -->
+  <section class="profile-section">
+    <h2>森澤 麻里江</h2>
+    <img src="images/profile-marie.jpeg" alt="森澤 麻里江" class="profile-img">
+    <div class="bio">
+      <p>ヴァイオリン奏者。東京藝術大学音楽学部卒。演奏家として「子どもに音楽の豊かさを伝える」ことをライフワークとしてとらえ、ヴァイオリン教室の主宰や国内幼稚園や教会での演奏を行う。</p>
+    </div>
+    <div class="sns-icons">
+      <a href="#"><img src="images/instagram.png" alt="Instagram"></a>
+    </div>
+  </section>
+
+  <!-- PHILOSOPHY -->
+  <section class="philosophy">
+    <div class="wrapper">
+      <div class="content">
+        <h2>音楽のたのしさを、<br>分かち合う。</h2>
+        <div class="text">
+          バッハ、モーツアルト、<br>
+          ベートーベン。<br>
+          <br>
+          これらの名前を聞いて、<br>
+          高貴で、近寄りがたく、<br>
+          難解（あるいは退屈?）<br>
+          と印象をもつ方も<br>
+          いるでしょうか。<br>
+          <br>
+          けれどももし<br>
+          そのような印象が<br>
+          あるとすれば、<br>
+          <strong>一緒に演奏する仲間がいる、</strong><br>
+          ということは<br>
+          とても魅力的なものです。<br>
+          <br>
+          仲間は、<br>
+          クラシックの<br>
+          入口を開けるときに<br>
+          大きな力になります。<br>
+          <br>
+          仲間は、あるいは<br>
+          既に入口の中にいる人には、<br>
+          自分と異なる<br>
+          感じ方をする人がいることに<br>
+          気付く機会となります。<br>
+          <br>
+          横浜ユース<br>
+          チェンバーオーケストラは<br>
+          <strong>音楽の楽しさを分かち合う</strong><br>
+          という目的で結成します。<br>
+          <br>
+          一番大切にしたいものは、<br>
+          音を間違えずに<br>
+          弾く技術ではなく、<br>
+          <br>
+          音楽の持つ力を理解し<br>
+          仲間と協力しながら、<br>
+          楽しいこと悲しいことを<br>
+          表現していく心です。<br>
+          <br>
+          機械や画面を通してではなく<br>
+          生の空間だからこその<br>
+          おもしろさがあります。<br>
+          <br>
+          皆で一緒に音を楽しみましょう。
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="divider">
+    <hr>
+  </div>
+
+  <!-- ACCESS -->
+  <section class="access-section">
+    <div class="wrapper text-center">
+      <h2>アクセス</h2>
+    </div>
+    <div class="access-grid">
+      <div class="info-col">
+        <p>〒244-0003&nbsp;&nbsp;神奈川県横浜市戸塚区戸塚町3967（JR戸塚駅より徒歩8分）</p>
+      </div>
+      <div class="map-col">
+        <iframe src="https://www.google.com/maps/embed/v1/place?q=%E6%88%B8%E5%A1%9A%E5%B9%BC%E7%A8%9A%E5%9C%92&language=ja&zoom=16&maptype=roadmap&key=AIzaSyCucBnVrKinLowf5-ChLoxp-jjWZ82TuTU" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- DIVIDER -->
+  <div class="divider">
+    <hr>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="contact-info">
+    <div class="inner">
+      <p>
+        体験・見学を随時受付中です！<br>
+        <br>
+        「見学・体験を申込む」ボタンをクリックしてフォームより、あるいはお電話にてお気軽にご連絡ください。<br>
+        <br>
+        電話：070-5587-4833
+      </p>
+    </div>
+  </section>
+
+  <!-- CTA BUTTON -->
+  <section class="cta-section">
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf-Y_np3wpqbCmLYuE8AOnjPZPrTzjvodD7uQkme3cX6yRg_A/viewform" class="cta-btn">見学・体験を申込む</a>
+  </section>
+
+  <!-- DOUBLE DIVIDER -->
+  <div class="divider divider-double">
+    <hr>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>Copyright 2024 Yokohama Youth Chamber</p>
+  </footer>
+
+</body>
+</html>
